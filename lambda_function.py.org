@@ -1,0 +1,5 @@
+import numpy as np
+
+def lambda_handler(event, context):
+    hoge = event['hoge']
+    return {'result': hogee}
