@@ -11,7 +11,7 @@ COPY lambda_function.py lambda_function.py
 RUN /bin/cp -f /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
   pip install -r requirements.txt -t /var/task
 # zip
-# RUN find . -type d -name '__pycache__' | xargs rm -rf
+RUN find . -type d -name '__pycache__' | xargs rm -rf
 RUN zip -r deploy_package.zip *
 
 # start
